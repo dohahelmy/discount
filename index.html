@@ -4,7 +4,23 @@
 "document-title": "خصومات وأكواد | Discounts Codes"}
 )
 
-@@include('./includes/2_brands.html', {"webRoot": "."})
+<div class="container">
+  <!-- search section -->
+  <section class="search">
+    <form action="">
+      <div class="form-group">
+        <label for="search">
+          <span>الآن..</span>
+          ابحث عن كود الخصم
+        </label>
+        <input id="search" class="form-control" type="text" placeholder="ابحث هنا...">
+      </div>
+    </form>
+  </section>
+  <!-- brands section -->
+  @@include('./includes/2_brands.html', {"webRoot": "."})
+</div>
 
 
-@@include('./includes/5_scripts.html', {"webRoot": "."})
+
+@@include('./includes/4_scripts.html', {"webRoot": "."})

@@ -1,2 +1,26 @@
-header {
+.header {
+  .container {
+    padding: 0;
+    padding-top: 11.7rem;
+  }
+
+  &-img {
+    margin-top: -10rem;
+
+    .main-img {
+      width: 100%;
+    }
+  }
+}
+
+.logo {
+  padding: 0 13.3rem;
+  text-align: end;
+
+  .main-logo {
+    width: 38.2rem;
+    height: 16.5rem;
+    margin-inline-start: auto;
+    object-fit: contain;
+  }
 }

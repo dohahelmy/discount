@@ -1,23 +1,31 @@
 footer {
-   
+    background-color: color(red);
+
+    .container {
+        background-color: color(red);
+    }
 }
 
 .copyrights {
-    background-color: color(white);
     padding: 6rem 0;
 
     &-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        
         p {
-            color: color(accent-dark);
             font-size: 2.1rem;
+            color: color(white);
         }
     }
 
-    .accent-btn {
-        border: 1px solid color(accent-dark);
+    .footer-btns {
+        display: flex;
+        align-items: center;
+
+        .btn-footer:first-child {
+            margin-inline-end: 2rem;
+        }
     }
 }

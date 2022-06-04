@@ -4,6 +4,7 @@
 	max-width: 100%;
 	width: 100%;
 	margin: 0 auto;
+	background-color: color(white);
 
 	@media (min-width: $tablets) {
 		max-width: 110rem;
@@ -23,9 +24,9 @@
 }
 
 // colors
-// .is-accent {
-// 	color: color(accent-light);
-// }
+.is-red {
+	color: color(red);
+}
 
 // Fonts
 .font-heavy {
@@ -71,33 +72,6 @@
 			min-height: 100%;
 			object-fit: cover;
 		}
-	}
-}
-
-
-/* ========== form styles ========== */
-.form {
-	&-group {
-		display: flex;
-		align-items: center;
-		margin-bottom: 2rem;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-		label {
-			font-size: 2rem;
-			width: 10rem;
-			margin-inline-end: 3rem;
-		}
-	}
-
-	&-control {
-		flex-grow: 1;
-		font-size: 1.8rem;
-		height: 4.5rem;
-		padding: 0.5rem 2rem;
 	}
 }
 

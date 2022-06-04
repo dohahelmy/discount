@@ -59,63 +59,7 @@ async function includeHTML() {
 			fileinclude({
 				prefix: "@@",
 				basepath: "@file",
-				context: {
-					nav: [{
-							text: 'من نحن',
-							link: 'about'
-						},
-						{
-							text: 'خدماتنا',
-							link: 'services'
-						},
-						{
-							text: 'تواصل معنا',
-							link: 'contact'
-						}
-					],
-					services: [{
-							img: 'design',
-							title: 'التصميم الإبداعي',
-						},
-						{
-							img: 'influencer',
-							title: 'المؤثرين',
-						},
-						{
-							img: 'marketing',
-							title: 'التسويق الرقمي والحملات التسويقية',
-						},
-						{
-							img: 'writing',
-							title: 'كتابة المحتوى',
-						},
-						{
-							img: 'code',
-							title: 'البرمجة',
-						},
-						{
-							img: 'sms',
-							title: 'الرسائل النصية',
-						}
-					],
-					social: [{
-							icon: 'linkedin',
-							link: 'www.linkedin.com'
-						},
-						{
-							icon: 'twitter',
-							link: 'www.twitter.com'
-						},
-						{
-							icon: 'instagram',
-							link: 'www.instagram.com'
-						},
-						{
-							icon: 'facebook',
-							link: 'www.facebook.com'
-						}
-					],
-				},
+				context: {},
 			})
 		)
 		.pipe(gulp.dest(paths.scripts.dest));

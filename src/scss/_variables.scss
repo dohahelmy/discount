@@ -1,9 +1,9 @@
 /* ========== Colors ========== */
 $white:#FFFFFF;
-$grey: #B3B3B3;
-$red: #36A9E1;
-$blue: #2D2E83;
-$black: #2D2E83;
+$grey: #666666;
+$red: #E40139;
+$blue: #242E86;
+$black: #000000;
 
 
 @function color($name) {
@@ -12,9 +12,9 @@ $black: #2D2E83;
 
 :root {
   --color-white: #FFFFFF;
-  --color-grey: #B3B3B3;
-  --color-red: #36A9E1;
-  --color-blue: #2D2E83;
+  --color-grey: #666666;
+  --color-red: #E40139;
+  --color-blue: #242E86;
   --color-black: #000000;
 }
 
