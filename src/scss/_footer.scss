@@ -11,12 +11,24 @@ footer {
 
     &-content {
         display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        
+
+
+        @media (min-width: $phones) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         p {
             font-size: 2.1rem;
             color: color(white);
+            margin-top: 3rem;
+
+            @media (min-width: $phones) {
+                margin-top: 0;
+            }
         }
     }
 

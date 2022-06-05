@@ -11,15 +11,15 @@
 }
 
 html {
-	font-size: 40%;
+	font-size: 32%;
 	direction: rtl;
 	scroll-behavior: smooth;
 
-	@media (min-width: 48.8em) {
-		font-size: 50%;
+	@media (min-width: $tablets) {
+		font-size: 40%;
 	}
 
-	@media (min-width: 64em) {
+	@media (min-width: $HD) {
 		font-size: 62.5%;
 	}
 }
@@ -32,7 +32,7 @@ body {
 	position: relative;
 	overflow-x: hidden;
 	line-height: 1;
-	background: color(white) repeat center/100% url('../img/bg.svg');
+	background: color(white) repeat center/cover url('../img/bg.svg');
 
 	&.active {
 		overflow: hidden;

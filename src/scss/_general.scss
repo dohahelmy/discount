@@ -2,13 +2,16 @@
 .container {
 	padding: 0 3rem;
 	max-width: 100%;
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 	background-color: color(white);
 
 	@media (min-width: $tablets) {
-		max-width: 110rem;
+		max-width: 125rem;
 	}
+	// @media (min-width: $desktops) {
+	// 	max-width: 123rem;
+	// }
 
 	@media (min-width: $desktops) {
 		max-width: 137rem;
