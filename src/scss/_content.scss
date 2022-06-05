@@ -7,11 +7,24 @@ main {
 .search {
   padding-bottom: 8.6rem;
 
+  form {
+    &:focus-within input[type='submit'] {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   .form {
     &-group {
+      position: relative;
+      z-index: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+      max-width: 83.8rem;
+      width: 100%;
+      margin: 0 auto;
+
 
       label {
         color: color(grey);
@@ -23,19 +36,44 @@ main {
           color: color(red);
         }
       }
+
+      input[type="submit"] {
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        border: none;
+        width: 3rem;
+        height: 3rem;
+        left: 3.5rem;
+        top: 70%;
+        transform: translateY(-50%);
+        background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 20.463 20.399'%3E%3Cpath id='Path_9' data-name='Path 9' d='M764.716,6480.518v20.4l-20.463-10.2Z' transform='translate(-744.253 -6480.518)' fill='%23dbcc40'/%3E%3C/svg%3E%0A");
+
+        &:hover {
+          background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 20.463 20.399'%3E%3Cpath id='Path_9' data-name='Path 9' d='M764.716,6480.518v20.4l-20.463-10.2Z' transform='translate(-744.253 -6480.518)' fill='%23e40139'/%3E%3C/svg%3E%0A");
+        }
+
+        &:focus {
+          transform: translate(-1rem, -50%);
+          outline: none;
+          background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 20.463 20.399'%3E%3Cpath id='Path_9' data-name='Path 9' d='M764.716,6480.518v20.4l-20.463-10.2Z' transform='translate(-744.253 -6480.518)' fill='%23e40139'/%3E%3C/svg%3E%0A");
+        }
+      }
     }
 
     &-control {
       font-size: 3rem;
       font-weight: 500;
-      max-width: 83.8rem;
       width: 100%;
       height: 9rem;
-      margin: 0 auto;
       padding: 2rem 12.4rem;
       border-radius: 4.2rem;
       border: 1px solid #F2F2F2;
       background-color: #F2F2F2;
+
+
     }
   }
 }
@@ -63,7 +101,8 @@ main {
     }
 
     &--hover {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
       position: absolute;
       inset: 0;
       border-radius: 2.8rem;
@@ -79,6 +118,7 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        transform: scale(0.75);
 
         .title {
           line-height: 3.6rem;
@@ -113,7 +153,13 @@ main {
     &:hover,
     &:focus {
       .brands-item--hover {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+
+        .content {
+          transition-delay: 0.05s;
+          transform: scale(1);
+        }
       }
     }
   }

@@ -32,6 +32,20 @@
       left: -4.3rem;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.463' height='20.399' viewBox='0 0 20.463 20.399'%3E%3Cpath id='Path_9' data-name='Path 9' d='M764.716,6480.518v20.4l-20.463-10.2Z' transform='translate(-744.253 -6480.518)' fill='%23dbcc40'/%3E%3C/svg%3E%0A");
     }
+
+    &:hover,
+    &:focus {
+      border-color: color(red);
+      background-color: color(red);
+
+      &::before {
+        animation: moreBtnPulseRight 1s infinite;
+      }
+
+      &::after {
+        animation: moreBtnPulseLeft 1s infinite;
+      }
+    }
   }
 
   &-footer {
@@ -42,6 +56,13 @@
     height: 3.7rem;
     border-radius: 1.85rem;
     color: color(blue);
+    border: 1px solid #DBCC40;
     background-color: #DBCC40;
+
+    &:hover,
+    &:focus {
+      border-color: color(blue);
+      background-color: color(white);
+    }
   }
 }

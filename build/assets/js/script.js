@@ -1,34 +1,19 @@
-// /////////////////////////////////
-// // Navbar
-// $('.nav-link').on('click', function () {
-// 	let scrollAnchor = $(this).attr('data-scroll');
-// 	let scrollPoint = $('#' + scrollAnchor).offset().top - 90;
-// 	$('body,html').animate({
-// 		scrollTop: scrollPoint
-// 	}, 100);
-// 	return false;
-// })
+function copy(el) {
+  /* Get the text field */
+  console.log(el)
+  el.textContent = 'تم النسخ';
+  // el.style.background = '#CCC';
+  // el.style.paddingInlineStart = '0';
+  // el.style.transition = 'all 0s';
 
-// function section_active(i) {
-// 	$('.nav-link.active').removeClass('active');
-// 	$('.nav-link').eq(i).addClass('active');
-// }
 
-// // Fixed navbar
-// $(window).on("scroll", function () {
-// 	const nav = $(".navbar");
-// 	let windscroll = $(window).scrollTop();
-// 	const scrollPoint = windscroll + 110;
-// 	const bottom = Math.round(windscroll + $(window).height());
+  // var copyText = el.previousElementSibling.textContent;
+  // console.log(copyText)
 
-// 	if (windscroll >= nav.height()) {
-// 		nav.addClass("fixed");
-// 		$('.section').each(function (i) {
-// 			if ($(this).position().top <= scrollPoint) section_active(i)
-// 			if (bottom == $(document).height()) section_active(i)
-// 		});
-// 		if ($('.section:first-child').position().top > scrollPoint) $('.nav-link.active').removeClass('active');
-// 	} else {
-// 		nav.removeClass("fixed");
-// 	}
-// });
+  // /* Select the text field */
+  // copyText.select();
+  // copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  // /* Copy the text inside the text field */
+  // navigator.clipboard.writeText(copyText.value);
+}
