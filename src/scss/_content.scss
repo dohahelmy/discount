@@ -76,12 +76,14 @@ main {
       font-weight: 500;
       width: 100%;
       height: 9rem;
-      padding: 2rem 12.4rem;
+      padding: 2rem 4rem;
       border-radius: 4.2rem;
       border: 1px solid #F2F2F2;
       background-color: #F2F2F2;
 
-
+      @media (min-width: 320px) {
+        padding: 2rem 12.4rem;
+      }
     }
   }
 }
@@ -90,7 +92,11 @@ main {
 .brands {
   display: grid;
   grid-gap: 3rem;
-  grid-template-columns: repeat(2, minmax(10rem, 1fr));
+  grid-template-columns: repeat(1, minmax(10rem, 1fr));
+
+  @media (min-width: 320px) {
+    grid-template-columns: repeat(2, minmax(10rem, 1fr));
+  }
 
   @media (min-width: $phones) {
     grid-template-columns: repeat(3, minmax(10rem, 1fr));
@@ -123,9 +129,11 @@ main {
       border-radius: 2.8rem;
       background-color: color(red);
       padding: 2rem;
+
       @media (min-width: $phones) {
         padding: 3rem 4.5rem;
       }
+
       @media (min-width: $desktops) {
         padding: 3rem 6.5rem;
       }
